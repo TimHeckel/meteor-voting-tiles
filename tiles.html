@@ -1,0 +1,80 @@
+<head>
+    <title>Voting Tiles</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Minneapolis Meteor Meetup</a>
+                <ul class="nav">
+                    <li><a href="http://meteor.com">Meteor</a></li>
+                    <li><a href="http://meetup.com/Meteor-Minneapolis">Meetup Group</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10" id="tiles">
+                {{>tiles}}
+            </div>
+            <div class="span2">
+                {{>rightNav}}
+            </div>
+        </div>
+    </div>
+</body>
+<template name="tiles">
+    {{#each questions}}
+        <div class="question alert pull-left {{alertType}}">
+            <div class="span8">
+                <div style="max-width:280px;">
+                    <h5>{{question}}</h5>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="btn-toolbar pull-right">
+                    <div class="btn-group">
+                    <a class="btn" href="#" disabled><i style="font-size:15pt;">{{voteCount}}</i></a>
+                    <a class="btn vote-up" href="#"><i class="icon-arrow-up"></i></a>
+                    <a class="btn vote-down" href="#"><i class="icon-arrow-down"></i></a>
+                    </div>
+                </div>
+                <div class="clearfix" style="padding-top:20px;">
+                        {{#if answer}}
+                        <label class="label label-success">Answered!</label>
+                    {{else}}
+                        <label class="label label-important">Unanswered</label>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    <div id="questionModal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+</template>
+<template name="rightNav">
+    <div class="alert alert-info"><h4>Ask Question</h4></div>
+    <textarea id="question" class="input-block-level" placeholder="Question" />
+    <textarea id="tags" class="input-block-level" placeholder="Tags (comma-delimited)" />
+    <button id="btn-add-question" class="btn btn-primary">Add</button>
+    <hr />
+    <div class="alert alert-info tagCloud">
+        {{#each tags}}
+            <span class="badge badge-info question-tag" data-value="{{this}}">{{this}}</span>&nbsp;
+        {{/each}}
+    </div>
+</template>
+<template name="modal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3>Question</h3>
+    </div>
+    <div class="modal-body">
+        {{question}}
+        <hr />
+        <textarea id="txtAnswer" class="input-block-level" placeholder="Answer">{{answer}}</textarea>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary btn-answer">Answer</button>
+    </div>
+</template>

@@ -1,0 +1,18 @@
+/* CSS declarations go here */
+.question-tag
+{
+    cursor:pointer;
+}
+.question 
+{
+    margin:3px; 
+    min-height: 100px;
+    cursor: pointer; 
+}
+
+.question:hover 
+{
+    border:1px solid #000;
+}
+
+#questionModal { display: none; }
