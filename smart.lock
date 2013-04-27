@@ -2,13 +2,14 @@
   "meteor": {
     "git": "https://github.com/meteor/meteor.git",
     "branch": "master",
-    "commit": "4d98d8cb4e5a95e9e98953f44c872c9332a042a3"
+    "commit": "2d8b41a87cec884489ead138b5dfea31487363f3"
   },
   "dependencies": {
     "basePackages": {
       "bootstrap-updated": {},
       "router": {},
-      "bootboxjs": {}
+      "bootboxjs": {},
+      "versioning": {}
     },
     "packages": {
       "bootstrap-updated": {
@@ -18,18 +19,33 @@
       },
       "router": {
         "git": "https://github.com/tmeasday/meteor-router.git",
-        "tag": "v0.3.4",
-        "commit": "8f0d5303de5b93771e91f21f818be27358c2fb30"
+        "tag": "v0.4.2",
+        "commit": "82d2895847502b4025370523dba60d597cff4772"
       },
       "bootboxjs": {
         "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
         "tag": "v0.1.0",
         "commit": "155b6c23506baf95c571568d28f2e5c8f526b9d0"
       },
-      "page-js": {
-        "git": "https://github.com/tmeasday/meteor-page-js.git",
-        "tag": "v1.3.3",
-        "commit": "c1e9832af3fc2b2f5139a16d93a82ca6fa0655da"
+      "versioning": {
+        "git": "https://github.com/jerico-dev/meteor-versioning.git",
+        "tag": "v0.4.8",
+        "commit": "234f6639b7f1c2f6709fcd65df05f2ed2668022c"
+      },
+      "page-js-ie-support": {
+        "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
+        "tag": "v1.3.5",
+        "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      },
+      "i18n": {
+        "git": "https://github.com/jerico-dev/meteor-i18n.git",
+        "tag": "v0.0.9",
+        "commit": "2cd6c72107a0d4afde57fb765ce9d57ad8ba43e2"
+      },
+      "logger": {
+        "git": "https://github.com/jerico-dev/meteor-logger.git",
+        "tag": "v0.1.2",
+        "commit": "8811ff33e4787d7c564e030ff3afaa3d7c4981fc"
       }
     }
   }

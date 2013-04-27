@@ -6,6 +6,7 @@
   "packages": {
     "bootstrap-updated": {},
     "router": {},
-    "bootboxjs": {}
+    "bootboxjs": {},
+    "versioning": {}
   }
 }

@@ -5,6 +5,6 @@
 
 insecure
 preserve-inputs
-bootstrap-updated
 router
 bootboxjs
+bootstrap
